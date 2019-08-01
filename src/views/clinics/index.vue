@@ -17,10 +17,10 @@
                 type="text"
                 class="form-control"
                 placeholder="Поиск клиник"
-              />
+              >
             </div>
             <button type="submit" class="btn-search-page">
-              <i class="fa fa-search"></i>
+              <i class="fa fa-search" />
             </button>
           </div>
         </form>
@@ -53,29 +53,29 @@
               :height="74"
               :width="74"
               :is-full-page="fullPage"
-            ></loading>
+            />
             <article
-              class="card item-clinic"
               v-for="item in allClinics"
               :key="item.id"
+              class="card item-clinic"
             >
               <div class="card-body vld-parent">
                 <div class="row-sm">
                   <aside class="col-md-3">
-                    <img v-bind:src="item.img" class="rounded img-fluid mb-3" />
+                    <img :src="item.img" class="rounded img-fluid mb-3">
                     <!-- Ish kunlari  -->
-                    <WorkData></WorkData>
+                    <WorkData />
                     <!-- /ish kunlari -->
                   </aside>
                   <div class="col-md-9">
-                    <h4 class="title">{{ item.title }}</h4>
-                    <p>{{ item.subtitle }}</p>
-                    <hr />
+                    <h4 class="title">{{ item.name }}</h4>
+                    <p>{{ item.short_description }}</p>
+                    <hr>
                     <p>{{ item.con }}</p>
                     <div class="row">
                       <div class="col-md">
                         <div class="icontext">
-                          <i class="icon fa fa-phone"></i>
+                          <i class="icon fa fa-phone" />
                           <p class="text">{{ item.phone }}</p>
                         </div>
                         <!-- icontext.// -->
@@ -83,7 +83,7 @@
                       <!-- col.// -->
                       <div class="col-md">
                         <div class="icontext">
-                          <i class="icon fa fa-globe"></i>
+                          <i class="icon fa fa-globe" />
                           <p class="text">{{ item.sayt }}</p>
                         </div>
                         <!-- icontext.// -->
@@ -91,7 +91,7 @@
                       <!-- col.// -->
                       <div class="col-md">
                         <div class="icontext">
-                          <i class="icon fa fa-map-marker"></i>
+                          <i class="icon fa fa-map-marker" />
                           <p class="text">{{ item.addess }}</p>
                         </div>
                         <!-- icontext.// -->
@@ -129,7 +129,7 @@
             </nav>
           </main>
           <!-- ./components/includes/Specialty   -->
-          <Specialty @qoshish="itemQoshish"></Specialty>
+          <Specialty />
         </div>
       </div>
       <!-- container //  -->
@@ -138,53 +138,58 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import "vue-loading-overlay/dist/vue-loading.css";
-import Loading from "vue-loading-overlay";
-import Specialty from "./components/Specialty";
-import WorkData from "./components/WorkData";
+import { mapGetters, mapActions } from 'vuex'
+import 'vue-loading-overlay/dist/vue-loading.css'
+import Loading from 'vue-loading-overlay'
+import Specialty from './components/Specialty'
+import WorkData from './components/WorkData'
 
 export default {
+  components: { Specialty, WorkData, Loading },
   data() {
     return {
-      message: "1",
+      message: '1',
       clinics: [],
       db: [],
       isLoading: false,
-      fullPage: false,
-    };
+      fullPage: false
+    }
   },
-  components: { Specialty, WorkData, Loading },
   computed: mapGetters(['allClinics']),
-  created: () => {
-    console.log("created");
-    // this.fetchClinics();
+  created() {
+    console.log('created')
+    this.fetchClinics().then(res => {
+      console.log(res)
+    }).catch(err => {
+      console.log(err)
+    })
   },
   methods: {
-    doAjax() {
-      this.isLoading = true;
-      setTimeout(() => {
-        this.isLoading = false;
-      }, 1000);
-    },
-    itemQoshish(arr) {
-      this.doAjax();
-      this.items = [];
-      this.db = JSON.parse(`[
-        {"id":"1","title":"Mds-servis","img":"images/posts/clinics/1.jpg","subtitle":"Медцентр, клиникамедицинская лаборатория","con":"Современная многопрофильная Клиника “ HAYAT ” оказывает диагностическую, амбулаторно-поликлиническую и стационарную помощь по всем мировым стандартам современной медицины оликлиническую и стационарную помощь по всем мировым стандартам современной медицины …","phone":"+998 71 200-88-66 +998 71 260-44-55","sayt":"info@hayatmed.uz www.hayatmed.uz","addess":"Ташкент ул. Мевазор 5/14, около детской клиники ТашПМИ."},
-        {"id":"1","title":"Mds-servis","img":"images/posts/clinics/1.jpg","subtitle":"Медцентр, клиникамедицинская лаборатория","con":"Современная многопрофильная Клиника “ HAYAT ” оказывает диагностическую, амбулаторно-поликлиническую и стационарную помощь по всем мировым стандартам современной медицины оликлиническую и стационарную помощь по всем мировым стандартам современной медицины …","phone":"+998 71 200-88-66 +998 71 260-44-55","sayt":"info@hayatmed.uz www.hayatmed.uz","addess":"Ташкент ул. Мевазор 5/14, около детской клиники ТашПМИ."},
-        {"id":"2","title":"Mds-servis","img":"images/posts/clinics/1.jpg","subtitle":"Медцентр, клиникамедицинская лаборатория","con":"Современная многопрофильная Клиника “ HAYAT ” оказывает диагностическую, амбулаторно-поликлиническую и стационарную помощь по всем мировым стандартам современной медицины оликлиническую и стационарную помощь по всем мировым стандартам современной медицины …","phone":"+998 71 200-88-66 +998 71 260-44-55","sayt":"info@hayatmed.uz www.hayatmed.uz","addess":"Ташкент ул. Мевазор 5/14, около детской клиники ТашПМИ."},
-        {"id":"2","title":"Mds-servis","img":"images/posts/clinics/1.jpg","subtitle":"Медцентр, клиникамедицинская лаборатория","con":"Современная многопрофильная Клиника “ HAYAT ” оказывает диагностическую, амбулаторно-поликлиническую и стационарную помощь по всем мировым стандартам современной медицины оликлиническую и стационарную помощь по всем мировым стандартам современной медицины …","phone":"+998 71 200-88-66 +998 71 260-44-55","sayt":"info@hayatmed.uz www.hayatmed.uz","img":"images/posts/clinics/1.jpg","addess":"Ташкент ул. Мевазор 5/14, около детской клиники ТашПМИ."},
-        {"id":"2","title":"Mds-servis","img":"images/posts/clinics/1.jpg","subtitle":"Медцентр, клиникамедицинская лаборатория","con":"Современная многопрофильная Клиника “ HAYAT ” оказывает диагностическую, амбулаторно-поликлиническую и стационарную помощь по всем мировым стандартам современной медицины оликлиническую и стационарную помощь по всем мировым стандартам современной медицины …","phone":"+998 71 200-88-66 +998 71 260-44-55","sayt":"info@hayatmed.uz www.hayatmed.uz","addess":"Ташкент ул. Мевазор 5/14, около детской клиники ТашПМИ."},
-        {"id":"3","title":"Mds-servis","img":"images/posts/clinics/1.jpg","subtitle":"Медцентр, клиникамедицинская лаборатория","con":"Современная многопрофильная Клиника “ HAYAT ” оказывает диагностическую, амбулаторно-поликлиническую и стационарную помощь по всем мировым стандартам современной медицины оликлиническую и стационарную помощь по всем мировым стандартам современной медицины …","phone":"+998 71 200-88-66 +998 71 260-44-55","sayt":"info@hayatmed.uz www.hayatmed.uz","addess":"Ташкент ул. Мевазор 5/14, около детской клиники ТашПМИ."}
-      ]`);
-      for (var i = 0; i < this.db.length; i++) {
-        let it = this.db[i];
-        if (arr.indexOf(parseInt(it.id)) !== -1) {
-          this.items.push(it);
-        }
-      }
-    },
-  },
-};
+    ...mapActions(['fetchClinics'])
+    // doAjax() {
+    //   this.isLoading = true
+    //   setTimeout(() => {
+    //     this.isLoading = false
+    //   }, 1000)
+    // },
+    // itemQoshish(arr) {
+    //   // this.doAjax()
+    //   // this.items = []
+    //   // this.db = JSON.parse(`[
+    //   //   {'id':'1','title':'Mds-servis','img':'images/posts/clinics/1.jpg','subtitle':'Медцентр, клиникамедицинская лаборатория','con':'Современная многопрофильная Клиника “ HAYAT ” оказывает диагностическую, амбулаторно-поликлиническую и стационарную помощь по всем мировым стандартам современной медицины оликлиническую и стационарную помощь по всем мировым стандартам современной медицины …','phone':'+998 71 200-88-66 +998 71 260-44-55','sayt':'info@hayatmed.uz www.hayatmed.uz','addess':'Ташкент ул. Мевазор 5/14, около детской клиники ТашПМИ.'},
+    //   //   {'id':'1','title':'Mds-servis','img':'images/posts/clinics/1.jpg','subtitle':'Медцентр, клиникамедицинская лаборатория','con':'Современная многопрофильная Клиника “ HAYAT ” оказывает диагностическую, амбулаторно-поликлиническую и стационарную помощь по всем мировым стандартам современной медицины оликлиническую и стационарную помощь по всем мировым стандартам современной медицины …','phone':'+998 71 200-88-66 +998 71 260-44-55','sayt':'info@hayatmed.uz www.hayatmed.uz','addess':'Ташкент ул. Мевазор 5/14, около детской клиники ТашПМИ.'},
+    //   //   {'id':'2','title':'Mds-servis','img':'images/posts/clinics/1.jpg','subtitle':'Медцентр, клиникамедицинская лаборатория','con':'Современная многопрофильная Клиника “ HAYAT ” оказывает диагностическую, амбулаторно-поликлиническую и стационарную помощь по всем мировым стандартам современной медицины оликлиническую и стационарную помощь по всем мировым стандартам современной медицины …','phone':'+998 71 200-88-66 +998 71 260-44-55','sayt':'info@hayatmed.uz www.hayatmed.uz','addess':'Ташкент ул. Мевазор 5/14, около детской клиники ТашПМИ.'},
+    //   //   {'id':'2','title':'Mds-servis','img':'images/posts/clinics/1.jpg','subtitle':'Медцентр, клиникамедицинская лаборатория','con':'Современная многопрофильная Клиника “ HAYAT ” оказывает диагностическую, амбулаторно-поликлиническую и стационарную помощь по всем мировым стандартам современной медицины оликлиническую и стационарную помощь по всем мировым стандартам современной медицины …','phone':'+998 71 200-88-66 +998 71 260-44-55','sayt':'info@hayatmed.uz www.hayatmed.uz','img':'images/posts/clinics/1.jpg','addess':'Ташкент ул. Мевазор 5/14, около детской клиники ТашПМИ.'},
+    //   //   {'id':'2','title':'Mds-servis','img':'images/posts/clinics/1.jpg','subtitle':'Медцентр, клиникамедицинская лаборатория','con':'Современная многопрофильная Клиника “ HAYAT ” оказывает диагностическую, амбулаторно-поликлиническую и стационарную помощь по всем мировым стандартам современной медицины оликлиническую и стационарную помощь по всем мировым стандартам современной медицины …','phone':'+998 71 200-88-66 +998 71 260-44-55','sayt':'info@hayatmed.uz www.hayatmed.uz','addess':'Ташкент ул. Мевазор 5/14, около детской клиники ТашПМИ.'},
+    //   //   {'id':'3','title':'Mds-servis','img':'images/posts/clinics/1.jpg','subtitle':'Медцентр, клиникамедицинская лаборатория','con':'Современная многопрофильная Клиника “ HAYAT ” оказывает диагностическую, амбулаторно-поликлиническую и стационарную помощь по всем мировым стандартам современной медицины оликлиническую и стационарную помощь по всем мировым стандартам современной медицины …','phone':'+998 71 200-88-66 +998 71 260-44-55','sayt':'info@hayatmed.uz www.hayatmed.uz','addess':'Ташкент ул. Мевазор 5/14, около детской клиники ТашПМИ.'}
+    //   // ]`)
+    //   // for (var i = 0; i < this.db.length; i++) {
+    //   //   const it = this.db[i]
+    //   //   if (arr.indexOf(parseInt(it.id)) !== -1) {
+    //   //     this.items.push(it)
+    //   //   }
+    //   // }
+    // }
+  }
+}
 </script>
