@@ -8,7 +8,7 @@
           <div class="form-search-page">
             <div class="input-group">
               <select class="form-control custom-select">
-                <option>Город Ташкент </option>
+                <option>Город Ташкент</option>
                 <option>Buxoro</option>
                 <option>Samarqand</option>
                 <option>Qashqadaryo</option>
@@ -16,7 +16,6 @@
               <input
                 type="text"
                 class="form-control"
-                name=""
                 placeholder="Поиск клиник"
               />
             </div>
@@ -36,7 +35,7 @@
             <a href="#" class="nav-link active">
               <strong>Mahalliy</strong> (1231)
             </a>
-            <a href="#" class="nav-link"> <strong>Xalqaro</strong> (32)</a>
+            <a href="#" class="nav-link"> <strong>Xalqaro</strong> (32) </a>
           </nav>
         </div>
         <!-- container //  -->
@@ -57,7 +56,7 @@
             ></loading>
             <article
               class="card item-clinic"
-              v-for="item in items"
+              v-for="item in allClinics"
               :key="item.id"
             >
               <div class="card-body vld-parent">
@@ -77,9 +76,7 @@
                       <div class="col-md">
                         <div class="icontext">
                           <i class="icon fa fa-phone"></i>
-                          <p class="text">
-                            {{ item.phone }}
-                          </p>
+                          <p class="text">{{ item.phone }}</p>
                         </div>
                         <!-- icontext.// -->
                       </div>
@@ -87,9 +84,7 @@
                       <div class="col-md">
                         <div class="icontext">
                           <i class="icon fa fa-globe"></i>
-                          <p class="text">
-                            {{ item.sayt }}
-                          </p>
+                          <p class="text">{{ item.sayt }}</p>
                         </div>
                         <!-- icontext.// -->
                       </div>
@@ -97,9 +92,7 @@
                       <div class="col-md">
                         <div class="icontext">
                           <i class="icon fa fa-map-marker"></i>
-                          <p class="text">
-                            {{ item.addess }}
-                          </p>
+                          <p class="text">{{ item.addess }}</p>
                         </div>
                         <!-- icontext.// -->
                       </div>
@@ -123,8 +116,12 @@
                 <li class="page-item active">
                   <a class="page-link" href="#">1</a>
                 </li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#">3</a>
+                </li>
                 <li class="page-item">
                   <a class="page-link" href="#">Next</a>
                 </li>
@@ -141,24 +138,28 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import "vue-loading-overlay/dist/vue-loading.css";
 import Loading from "vue-loading-overlay";
 import Specialty from "./components/Specialty";
 import WorkData from "./components/WorkData";
+
 export default {
   data() {
     return {
       message: "1",
-      items: [],
+      clinics: [],
       db: [],
       isLoading: false,
-      fullPage: false
+      fullPage: false,
     };
   },
-  mounted() {
-    console.log("Component mounted.");
-  },
   components: { Specialty, WorkData, Loading },
+  computed: mapGetters(['allClinics']),
+  created: () => {
+    console.log("created");
+    // this.fetchClinics();
+  },
   methods: {
     doAjax() {
       this.isLoading = true;
@@ -183,7 +184,7 @@ export default {
           this.items.push(it);
         }
       }
-    }
-  }
+    },
+  },
 };
 </script>
