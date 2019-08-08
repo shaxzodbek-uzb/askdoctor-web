@@ -2,6 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/Main/Index.vue'
 import ClinicRouter from './modules/clinic'
+import DoctorRouter from './modules/doctor'
+import ArticleRouter from './modules/article'
+import EncyclopediaRouter from './modules/encyclopedia'
 
 Vue.use(Router)
 
@@ -14,7 +17,10 @@ export default new Router({
       name: 'home',
       component: Home
     },
-    ...ClinicRouter
+    ...ClinicRouter,
+    ...DoctorRouter,
+    ...ArticleRouter,
+    ...EncyclopediaRouter
     // {
     //   path: "/about",
     //   name: "about",
