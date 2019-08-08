@@ -8,13 +8,9 @@ export function index(query) {
   })
 }
 
-export function show(id, includePermissions = false) {
-  const query = {}
-  if (includePermissions) {
-    query.include = 'Permissions'
-  }
+export function show(id, query) {
   return request({
-    url: 'clinic' + id,
+    url: 'clinic/' + id,
     method: 'get',
     params: query
   })
@@ -29,11 +25,33 @@ export function store(role) {
   })
 }
 
-export function update(role) {
+export function update(clinic) {
   return request({
-    url: 'clinic/' + role.id,
+    url: 'clinic/' + clinic.id,
     method: 'patch',
-    data: role
+    data: clinic
+  })
+}
+export function updateFeaturedPhoto(clinic, media_id) {
+  return request({
+    url: 'clinic/gallery/featured/' + clinic.id,
+    method: 'post',
+    data: { media_id: media_id }
+  })
+}
+
+export function addPhoto(clinic, media_id) {
+  return request({
+    url: 'clinic/gallery/' + clinic.id,
+    method: 'post',
+    data: { media_id: media_id }
+  })
+}
+export function removePhoto(clinic, media_id) {
+  return request({
+    url: 'clinic/gallery/' + clinic.id,
+    method: 'delete',
+    data: { media_id: media_id }
   })
 }
 
