@@ -5,6 +5,8 @@ import ClinicRouter from './modules/clinic'
 import DoctorRouter from './modules/doctor'
 import ArticleRouter from './modules/article'
 import EncyclopediaRouter from './modules/encyclopedia'
+import AuthRouter from './modules/auth'
+import profileRouter from './modules/profile'
 
 Vue.use(Router)
 
@@ -17,7 +19,9 @@ export const constantRoutes = [
   ...ClinicRouter,
   ...DoctorRouter,
   ...ArticleRouter,
-  ...EncyclopediaRouter
+  ...EncyclopediaRouter,
+  ...AuthRouter,
+  ...profileRouter
   // {
   //   path: "/about",
   //   name: "about",
