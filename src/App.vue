@@ -1,17 +1,17 @@
 <template>
   <div>
-    <div class="screen-overlay"></div>
+    <div class="screen-overlay" />
     <Header />
-    <router-view></router-view>
+    <router-view />
     <Footer />
   </div>
 </template>
 
 <script>
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 export default {
-  name: "Layout",
+  name: 'Layout',
   components: { Header, Footer }
-};
+}
 </script>

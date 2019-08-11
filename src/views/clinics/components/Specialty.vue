@@ -6,18 +6,18 @@
         <h5 class="title">По специальности</h5>
         <!-- <input type="text" :value='msg1' name=""> -->
         <label
-          class="item-filter custom-control custom-checkbox"
           v-for="item in doctors"
           :key="item.id"
+          class="item-filter custom-control custom-checkbox"
         >
           <input
+            :id="'checkbox' + item.id"
             type="checkbox"
             :checked="item.chec"
-            :id="'checkbox' + item.id"
             :data-doctor_id="item.id"
             class="custom-control-input checkbox"
             @click="click(item.id)"
-          />
+          >
           <span class="custom-control-label">{{ item.title }}</span>
         </label>
 
@@ -32,18 +32,18 @@
 
 <script>
 export default {
-  props: ["msg1"],
+  props: ['msg1'],
   data() {
     return {
-      val: "asdsad",
+      val: 'asdsad',
       doctors: [],
-      checkedlar: [],
-    };
+      checkedlar: []
+    }
   },
   mounted() {
-    console.log("Component mounted.");
-    this.massiv();
-    this.defaultclick();
+    console.log('Component mounted.')
+    this.massiv()
+    this.defaultclick()
   },
   methods: {
     massiv() {
@@ -70,11 +70,11 @@ export default {
 {"chec":"","title" : "Педиатр","id":"20"},
 {"chec":"","title" : "Маммолог","id":"21"},
 {"chec":"","title" : "Уролог","id":"22"}
-]`);
+]`)
     },
     // chertilganda idlarni uzatish
     click(id) {
-      this.checkedlar = [id];
+      this.checkedlar = [id]
       // let list = $(".checkbox");
       // for (var i = list.length - 1; i >= 0; i--) {
       //   let it = list[i];
@@ -82,7 +82,7 @@ export default {
       //     this.checkedlar.push($(it).data("doctor_id"));
       //   }
       // }
-      this.$emit("qoshish", this.checkedlar);
+      this.$emit('qoshish', this.checkedlar)
     },
     // Tozalash function ni
     clear() {
@@ -91,17 +91,17 @@ export default {
       //   this.checkedlar.push(parseInt(this.doctors[i]["id"]));
       // }
       // this.checkedlar = []
-      this.$emit("qoshish", this.checkedlar);
+      this.$emit('qoshish', this.checkedlar)
     },
     // default qiymatlar
     defaultclick() {
       for (var i = 0; i < this.doctors.length; i++) {
-        if (this.doctors[i]["chec"] !== "") {
-          this.checkedlar.push(parseInt(this.doctors[i]["id"]));
+        if (this.doctors[i]['chec'] !== '') {
+          this.checkedlar.push(parseInt(this.doctors[i]['id']))
         }
       }
-      this.$emit("qoshish", this.checkedlar);
-    },
-  },
-};
+      this.$emit('qoshish', this.checkedlar)
+    }
+  }
+}
 </script>

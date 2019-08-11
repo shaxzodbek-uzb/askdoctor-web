@@ -3,10 +3,10 @@
     <!-- ========================= FOOTER ========================= -->
     <footer class="section-footer bg-blue">
       <section class="footer-bottom text-center">
-        <img src="/images/misc/payment.png" />
+        <img src="/images/misc/payment.png">
         <p class="text-white mt-3">
           © 2019 AskDoktor MCHJ xizmat ko’rsatadi
-          <br />Barcha huquqlar himoyalangan
+          <br>Barcha huquqlar himoyalangan
         </p>
       </section>
       <!-- footer-bottom .// -->
@@ -18,6 +18,6 @@
 
 <script>
 export default {
-  name: "ProfileFooter"
-};
+  name: 'Footer'
+}
 </script>

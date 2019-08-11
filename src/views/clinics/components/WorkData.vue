@@ -17,6 +17,6 @@
 
 <script>
 export default {
-  name: "Date"
-};
+  name: 'Date'
+}
 </script>
