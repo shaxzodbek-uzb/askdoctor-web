@@ -121,32 +121,33 @@ export default {
     //   $('.category-dard').addClass('minimized')
     // })
 
-    this.items = JSON.parse(`[
-      {'name':'Bosh og\'rig\'i','img':'images/icons/dard/1.png'},
-      {'name':'Homiladorlik','img':'images/icons/dard/3.png'},
-      {'name':'Buyrak kasalliklari','img':'images/icons/dard/4.png'},
-      {'name':'Tishlar bo\'yicha','img':'images/icons/dard/5.png'},
-      {'name':'Teri kasalliklari','img':'images/icons/dard/6.png'},
-      {'name':'O\'pkada muammo','img':'images/icons/dard/7.png'},
-      {'name':'Jinsiy muammo','img':'images/icons/dard/8.png'},
-      {'name':'Jigar kasalliklari','img':'images/icons/dard/9.png'},
-      {'name':'Yurak muammosi','img':'images/icons/dard/10.png'},
-      {'name':'Oshqozon va ichak','img':'images/icons/dard/11.png'},
-      {'name':'Og\'izda muammo','img':'images/icons/dard/12.png'}]`)
+    this.items = [
+      { 'name': 'Bosh og\'rig\'i', 'img': 'images/icons/dard/1.png' },
+      { 'name': 'Homiladorlik', 'img': 'images/icons/dard/3.png' },
+      { 'name': 'Buyrak kasalliklari', 'img': 'images/icons/dard/4.png' },
+      { 'name': 'Tishlar bo\'yicha', 'img': 'images/icons/dard/5.png' },
+      { 'name': 'Teri kasalliklari', 'img': 'images/icons/dard/6.png' },
+      { 'name': 'O\'pkada muammo', 'img': 'images/icons/dard/7.png' },
+      { 'name': 'Jinsiy muammo', 'img': 'images/icons/dard/8.png' },
+      { 'name': 'Jigar kasalliklari', 'img': 'images/icons/dard/9.png' },
+      { 'name': 'Yurak muammosi', 'img': 'images/icons/dard/10.png' },
+      { 'name': 'Oshqozon va ichak', 'img': 'images/icons/dard/11.png' },
+      { 'name': 'Og\'izda muammo', 'img': 'images/icons/dard/12.png' }
+    ]
 
-    this.items2 = JSON.parse(`[
-      {'name':'Bosh og\'rig\'i','img':'images/icons/dard/18.png'},
-      {'name':'Homiladorlik','img':'images/icons/dard/19.png'},
-      {'name':'Buyrak kasalliklari','img':'images/icons/dard/20.png'},
-      {'name':'Tishlar bo'yicha','img':'images/icons/dard/5.png'},
-      {'name':'Teri kasalliklari','img':'images/icons/dard/6.png'},
-      {'name':'O'pkada muammo','img':'images/icons/dard/7.png'},
-      {'name':'O\'pkada muammo','img':'images/icons/dard/7.png'},
-      {'name':'Jinsiy muammo','img':'images/icons/dard/8.png'},
-      {'name':'Jigar kasalliklari','img':'images/icons/dard/9.png'},
-      {'name':'Yurak muammosi','img':'images/icons/dard/10.png'},
-      {'name':'Oshqozon va ichak','img':'images/icons/dard/11.png'},
-      {'name':'Og\'izda muammo','img':'images/icons/dard/12.png'}]`)
+    this.items2 = [
+      { 'name': 'Bosh og\'rig\'i', 'img': 'images/icons/dard/1.png' },
+      { 'name': 'Homiladorlik', 'img': 'images/icons/dard/3.png' },
+      { 'name': 'Buyrak kasalliklari', 'img': 'images/icons/dard/4.png' },
+      { 'name': 'Tishlar bo\'yicha', 'img': 'images/icons/dard/5.png' },
+      { 'name': 'Teri kasalliklari', 'img': 'images/icons/dard/6.png' },
+      { 'name': 'O\'pkada muammo', 'img': 'images/icons/dard/7.png' },
+      { 'name': 'Jinsiy muammo', 'img': 'images/icons/dard/8.png' },
+      { 'name': 'Jigar kasalliklari', 'img': 'images/icons/dard/9.png' },
+      { 'name': 'Yurak muammosi', 'img': 'images/icons/dard/10.png' },
+      { 'name': 'Oshqozon va ichak', 'img': 'images/icons/dard/11.png' },
+      { 'name': 'Og\'izda muammo', 'img': 'images/icons/dard/12.png' }
+    ]
   },
   methods: {
     // Loading function ni
