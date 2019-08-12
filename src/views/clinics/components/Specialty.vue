@@ -32,7 +32,12 @@
 
 <script>
 export default {
-  props: ['msg1'],
+  props: {
+    msg1: {
+      type: String,
+      default: ''
+    }
+  },
   data() {
     return {
       val: 'asdsad',

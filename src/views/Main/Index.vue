@@ -111,11 +111,11 @@
                     </div>
                     <div class="message-left">
                       <div class="img-wrap"><img src="images/illustration/avatar-doc.png"></div>
-                      <div class="text-wrap">Bu katta muammo emas aslida, siz  1 oy davomida yog’li mahsulotlarni iste'mol qilmang, ko’proq toza suv ichib turing </div>
+                      <div class="text-wrap">Bu katta muammo emas aslida, siz 1 oy davomida yog’li mahsulotlarni iste'mol qilmang, ko’proq toza suv ichib turing </div>
                     </div>
                     <div class="message-left">
                       <div class="img-wrap"><img src="images/illustration/avatar-doc.png"></div>
-                      <div class="text-wrap">2 hafta mobaynida har kun Mezim tabletkasini  3 mahal ovqatdan so'ng iching, ovqatdan keyin 1 piyola limon choy iching.   Sovuq va qaynoq narsalar umuman iste'mol qilmang. Oshqozoningizni zont yutish orqali tekshirish tavsiya etiladi. Mening qabulimga kelsangiz klinikamizda bir necha labaratoriya tekshiruvlarni amalga oshiramiz. </div>
+                      <div class="text-wrap">2 hafta mobaynida har kun Mezim tabletkasini 3 mahal ovqatdan so'ng iching, ovqatdan keyin 1 piyola limon choy iching.   Sovuq va qaynoq narsalar umuman iste'mol qilmang. Oshqozoningizni zont yutish orqali tekshirish tavsiya etiladi. Mening qabulimga kelsangiz klinikamizda bir necha labaratoriya tekshiruvlarni amalga oshiramiz. </div>
                     </div>
                     <div class="message-left">
                       <div class="img-wrap"><img src="images/illustration/avatar-doc.png"></div>

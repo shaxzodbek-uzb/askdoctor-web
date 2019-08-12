@@ -49,24 +49,6 @@
 
 <script>
 export default {
-  mounted() {
-    console.log('Component mounted.')
-    // / accordeon
-
-    if ($('.accordion').length > 0) {
-      $('.item-accordion.active').find('.body').slideDown()
-
-      $('.accordion .title').click(function() {
-        if ($(this).parent().hasClass('active')) {
-          return false
-        } else {
-          $(this).parent().addClass('active')
-          $(this).parent().siblings('.active').removeClass('active')
-          $(this).parent().siblings('.item-accordion').find('.body').slideUp()
-          $(this).next('.body').slideDown()
-        }
-      })
-    }
-  }
+  name: 'Faq'
 }
 </script>

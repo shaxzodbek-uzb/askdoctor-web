@@ -22,7 +22,7 @@
           </div> <!-- col.// -->
           <!-- /for -->
           <!-- for hidden-->
-          <div v-for="hidden in hidden" :key="hidden.id" class="col-lg-4 col-sm-6 col-specialist-hidden">
+          <div v-for="hidden in hiddens" :key="hidden.id" class="col-lg-4 col-sm-6 col-specialist-hidden">
             <a href="page-consult-detail.html" class="item-specialist">
               <div class="text-wrap">
                 <h5 class="title">{{ hidden.title }}</h5>
@@ -55,7 +55,7 @@ export default {
   data() {
     return {
       consult: [],
-      hidden: [],
+      hiddens: [],
       isLoading: false,
       fullPage: false
     }
@@ -72,17 +72,17 @@ export default {
         this.isLoading = false
 
         // Yana koproq vca Kamroq tugmalari
-        this.Events()
+        // this.Events()
       }, 1000)
     },
-    Events() {
-      $('.category-specialist').toggleClass('minimized')
-      if ($('.category-specialist').hasClass('minimized')) {
-        $('.btn-specialist-expand').text("Yanada ko'proq")
-      } else {
-        $('.btn-specialist-expand').text('Kamroq')
-      }
-    },
+    // Events() {
+    //   $('.category-specialist').toggleClass('minimized')
+    //   if ($('.category-specialist').hasClass('minimized')) {
+    //     $('.btn-specialist-expand').text("Yanada ko'proq")
+    //   } else {
+    //     $('.btn-specialist-expand').text('Kamroq')
+    //   }
+    // },
     Datas() {
       this.consult = JSON.parse(`[
                     { "title":"Genekolog", "content": "Qisqacha matn bu genekolog ishi haqida, lorem ipsum demo text here always", "img": "images/items/specialist/1.jpg" },
@@ -95,7 +95,7 @@ export default {
                     { "title":"Genekolog", "content": "Qisqacha matn bu genekolog ishi haqida, lorem ipsum demo text here always", "img": "images/items/specialist/8.jpg" },
                     { "title":"Oftalmolog", "content": "Qisqacha matn bu genekolog ishi haqida, lorem ipsum demo text here always", "img": "images/items/specialist/9.jpg" }
                 ]`)
-      this.hidden = JSON.parse(`[
+      this.hiddens = JSON.parse(`[
                     { "title":"Genekolog", "content": "Qisqacha matn bu genekolog ishi haqida, lorem ipsum demo text here always", "img": "images/items/specialist/1.jpg" },
                     { "title":"Oftalmolog", "content": "Qisqacha matn bu genekolog ishi haqida, lorem ipsum demo text here always", "img": "images/items/specialist/2.jpg" },
                     { "title":"Psixoterapevt", "content": "Qisqacha matn bu genekolog ishi haqida, lorem ipsum demo text here always", "img": "images/items/specialist/3.jpg" }
