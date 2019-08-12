@@ -6,10 +6,10 @@
           <div class="card card-login">
             <div class="card-body">
               <h4 class="card-title mb-4 mt-1">Kirish</h4>
-              <form>
+              <form ref="loginForm" :model="loginForm" :rules="loginRules">
                 <div class="form-group">
                   <label>Telefon</label>
-                  <input v-model="loginForm.username" class="form-control" value="+998" type="email">
+                  <input v-model="loginForm.username" class="form-control" value="+998" type="text">
                 </div>
                 <!-- form-group// -->
                 <div class="form-group">
@@ -26,7 +26,7 @@
                 </div>
                 <!-- form-group form-check .// -->
                 <div class="form-group">
-                  <button type="submit" class="btn btn-primary btn-block">Login</button>
+                  <button type="button" class="btn btn-primary btn-block" @click="handleLogin">Login</button>
                 </div>
                 <!-- form-group// -->
               </form>
@@ -47,7 +47,7 @@
 
 <script>
 import { validUsername } from '@/utils/validate'
-
+import { mapActions } from 'vuex'
 export default {
   name: 'Login',
   data() {
@@ -88,21 +88,24 @@ export default {
     }
   },
   methods: {
+    ...mapActions({ login: 'user/login' }),
     handleLogin() {
-      this.$refs.loginForm.validate(valid => {
-        if (valid) {
-          this.loading = true
-          this.$store.dispatch('user/login', this.loginForm).then(() => {
-            this.$router.push({ path: this.redirect || '/' })
-            this.loading = false
-          }).catch(() => {
-            this.loading = false
-          })
-        } else {
-          console.log('error submit!!')
-          return false
-        }
+      // console.log('submit', this.$refs.loginForm.validate())
+      // this.$refs.loginForm.validate(valid => {
+      //   if (valid) {
+      console.log('submit')
+      this.loading = true
+      this.login(this.loginForm).then(() => {
+        this.$router.push({ path: this.redirect || '/' })
+        this.loading = false
+      }).catch(() => {
+        this.loading = false
       })
+      // } else {
+      //   console.log('error submit!!')
+      //   return false
+      // }
+      // })
     }
   }
 }
