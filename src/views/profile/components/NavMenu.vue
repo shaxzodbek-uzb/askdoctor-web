@@ -3,27 +3,12 @@
     <h2 class="title-page-account">Kabinet</h2>
 
     <ul class="nav-aside-account">
-      <li>
-        <router-link to="/user/med-card">Med kartam</router-link>
-      </li>
-      <li>
-        <router-link to="/user/my-doctors">Mening vrachlarim</router-link>
-      </li>
-      <li>
-        <router-link to="/user/my-files">Fayllarim</router-link>
-      </li>
-      <li class="active">
-        <router-link to="/user">Profilim</router-link>
-      </li>
-      <li>
-        <router-link to="/user/setting">Sozlamalar</router-link>
-      </li>
-      <li>
-        <router-link to="/user/payments">To’lovlarim</router-link>
-      </li>
-      <li>
-        <router-link to="/logout">Chiqish</router-link>
-      </li>
+      <router-link tag="li" active-class="active" to="/profile/med-cards"><a>Med kartam</a></router-link>
+      <router-link tag="li" active-class="active" to="/profile/my-doctors"><a>Mening vrachlarim</a></router-link>
+      <router-link tag="li" active-class="active" to="/profile/my-files"><a>Fayllarim</a></router-link>
+      <router-link tag="li" active-class="active" to="/profile/account-settings"><a>Profilim</a></router-link>
+      <router-link tag="li" active-class="active" to="/profile/payments"><a>To’lovlarim</a></router-link>
+      <router-link tag="li" active-class="active" to="/logout"><a>Chiqish</a></router-link>
     </ul>
     <hr>
     <router-link to="/consult" class="btn btn-primary btn-block">Yangi konsultatsiya</router-link>

@@ -36,7 +36,9 @@ export const constantRoutes = [
 const createRouter = () => new Router({
   // mode: 'history', // require service support
   scrollBehavior: () => ({ y: 0 }),
-  routes: constantRoutes
+  routes: constantRoutes,
+  linkActiveClass: 'active', // active class for non-exact links.
+  linkExactActiveClass: 'active'
 })
 
 const router = createRouter()
