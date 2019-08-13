@@ -98,6 +98,7 @@ export default {
       this.login(this.loginForm).then(() => {
         this.$router.push({ path: this.redirect || '/' })
         this.loading = false
+        this.$toaster.success('Muvofaqqiyatli yakunlandi.')
       }).catch(() => {
         this.loading = false
       })
