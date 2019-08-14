@@ -1,0 +1,15 @@
+.card{ 
+    .img-wrap{overflow:hidden; position:relative; }
+    i.online{ 
+        position: absolute;
+    }
+}
+
+.card[class*="item-"]{ 
+
+    &:hover{box-shadow:0 3px 10px rgba(#333, .2); transition:.2s}
+}
+
+.card-sm{
+    .img-wrap{height:180px;}
+}

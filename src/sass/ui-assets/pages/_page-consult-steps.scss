@@ -1,0 +1,133 @@
+/* ================ PAGES HEADER ================== */
+
+.section-step{
+	height:calc(100vh - 70px); 
+	.row{ height:100%; }
+}
+
+
+.header-step{
+	padding:45px 45px; padding-bottom: 120px;
+	.title-section{margin:0; color:#fff;}
+}
+.content-steps{
+	padding:60px 45px 30px 45px; background-color:#fff; border-top-right-radius:80px; margin-top:-80px;
+}
+
+.consult-step-aside{
+	width:500px; 
+}
+
+.bg-consult-step{
+	background-color:#ccc;
+	background-image:url('../images/bg/bg-consult-step.jpg');
+	background-size:cover; 
+	background-position:center center; 
+	min-height:400px;
+	position:relative;
+	width:calc(100% - 500px);
+
+
+}
+
+.info-step-wrap{
+	position:absolute;
+	bottom:0;
+	left:0;
+	padding:20px 40px;
+	border-top-right-radius:80px;
+	background-color:rgba(#333, .7);
+	display:flex;
+
+	img{height:44px; width:44px;}
+	p{margin-bottom:0; margin-top:15px; font-weight:300;}
+	.info{
+		margin:0 20px; color:#fff;
+	}
+}
+
+.btn-payment-wrap{
+	display:grid; grid-template-columns: auto auto; grid-gap:15px 15px;
+}
+
+.btn-payment{
+background-image: linear-gradient(-180deg, #F8F8F8 0%, #EEEEEE 100%);
+border: 1px solid #DDE5E9;
+border-radius: 4px; display:block; 
+padding:15px; text-align:center;
+
+&:hover{
+	border-color:$primary;
+}
+}
+
+.payment-card{ position:relative;
+    padding: 30px; margin-bottom:20px;
+    border-radius: 7px; 
+    background:#dadada;
+    height: 220px;
+    .form-control{border:0}
+    form{margin-top:30px;}
+
+
+    .chip {
+  position: relative;
+  top: 10px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 40px;
+  border-radius: 5px;
+  background: linear-gradient(to bottom left, #fff, #eee);
+  overflow: hidden;
+}
+.chip .chip-line {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #999;
+}
+.chip .chip-line:nth-child(1) {
+  top: 13px;
+}
+.chip .chip-line:nth-child(2) {
+  top: 20px;
+}
+.chip .chip-line:nth-child(3) {
+  top: 28px;
+}
+.chip .chip-line:nth-child(4) {
+  left: 25px;
+  width: 1px;
+  height: 50px;
+}
+.chip .chip-main {
+  width: 20px;
+  height: 25px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  background-image: linear-gradient(to bottom left, #fff, #ddd);
+  z-index: 1;
+}
+
+
+}
+.express-select-contact{
+	label.form-group{position:relative;  padding-left: 46px; margin-bottom:30px; display:block;}
+	.icon{width:38px; height:38px; display:block; line-height:39px; text-align:center; background:#ccc; color:#fff; font-size:18px; border-radius:100%;
+		position:absolute; top:-9px; left:0;
+	}
+}
+
+.express-select-payment{
+	label.form-group{display:block; margin-bottom:10px; border:1px solid $border-color; padding:15px; border-radius:4px;}
+}
+
+.block-user-consult-express{ margin-top:15px; margin-bottom:30px; border:1px solid $border-color; padding:20px; border-radius:7px; 
+	.icon-wrap{margin-right:15px;}
+	.icon{ width:52px; height:52px; background-color:#EDEDED; color:$element; border-radius:50px; line-height:52px; font-size:22px;}
+	.icon-wrap{margin-right:20px;}
+	.title{  color:$warning; margin-bottom:3px;}
+}

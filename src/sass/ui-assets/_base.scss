@@ -1,0 +1,27 @@
+/* ==================== INCLUDE FONTS ======================= */
+@import url('../fonts/roboto/font.css');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500&subset=cyrillic');
+//font-family: 'Ubuntu', sans-serif;
+
+html{font-size:15px;}
+
+img{max-width:100%;}
+
+.screen-overlay {
+    width: 100%;
+    height: 100%;
+    z-index: 80;
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-transition: background 0s ease,visibility 0s ease;
+    transition: background 0s ease,visibility 0s ease;
+    display: none;
+    visibility: hidden;
+}
+
+.screen-overlay.active {
+    background-color: rgba(34,34,34,0.8);
+    display: block;
+    visibility: visible;
+}

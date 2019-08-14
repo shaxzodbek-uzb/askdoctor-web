@@ -1,0 +1,119 @@
+/* ================ PAGES HEADER ================== */
+
+.section-express-consult{
+	height:calc(100vh - 70px); border-top:1px solid #ccc;
+	.row{ height:100%; }
+}
+.bg-header-express{
+	height:250px; background:#ddd; background-size:cover; background-position:center center; position:relative;
+	&:after{
+		display:block; content:""; position:absolute; top:0; left:0; height:100%; width:100%; background-color:rgba(#fff, .7); transition:.2s;
+	}
+}
+
+.price-consult-express{ 
+		margin-top: -60px;
+	    position: relative;
+	    z-index: 10;
+		width:120px; height:120px; border-radius:100px; background-color:$primary; border:3px solid #fff; color:#fff; text-align:center;
+		padding-top:42px; line-height:1.2;
+	.num{ font-size:20px; font-weight:500; }
+	}
+.content-express-side{
+	display:block; padding:0px 70px 30px 70px;
+	.title{font-size:36px; color:$dark; margin-top:30px;}
+}
+
+
+.col-express:first-child{ border-right:1px solid #DDE5E9;}
+
+.col-express:first-child:hover{ 
+	outline-color:$primary;
+	outline-width: 10px;
+    outline-style: solid;
+    outline-offset: -10px;
+    transition:.3s;
+    .bg-header-express:after{ background-color:rgba($primary, .7); transition:.2s }
+    .btn-outline-primary{ background-color:$primary; color:white}
+
+}
+.col-express:nth-child(2):hover{
+
+	outline-color:$danger;
+	outline-width: 10px;
+    outline-style: solid;
+    outline-offset: -10px;
+    transition:.3s;
+    .bg-header-express:after{ background-color:rgba($danger, .7); transition:.2s  }
+
+    .btn-outline-danger{ background-color:$danger; color:white}
+}
+
+
+
+.tag{
+	background-color:#FFEFF3; padding:7px 20px; display:inline-block; border-radius:20px; color:#A50600; margin-right:5px; margin-bottom:10px;
+}
+
+
+.img-consult-left{
+	position:absolute; left:5%; bottom:-170px; max-width:300px; height:auto;
+}
+.img-consult-right{
+	position:absolute; right:5%; bottom:-120px; max-width:350px; height:auto;
+}
+
+.card-price{ 
+max-width:400px; border:0; margin-top:-111px;
+background: #FFFFFF;
+box-shadow: 0 2px 30px 0 rgba(199,199,199,0.50);
+border-radius: 4px;
+.price{margin-bottom:0; font-size:24px;}
+}
+
+.item-doctor-consult-detail{ align-items:center; background:#fff; padding:15px 20px; margin-top:15px; 
+	border:1px solid #DDE5E9; border-radius:4px; display:flex;  width:100%;
+	.img-wrap{ width:90px; margin-right:20px;}
+	img{width:90px; height:90px; object-fit:cover; border-radius:100%; border:1px solid #ddd;  }
+	.title{ font-weight:bold; font-size:15px;}
+}
+
+.aside-bg{
+	position:absolute; top:0; left:0;  width:100%; height:100%;
+	.consult-detail-bg2{  height:100%; width:100%; border-top-right-radius:120px; background-size:cover;}
+	.consult-detail-bg1{  height:100%; width:100%; border-bottom-left-radius:120px; background-size:cover;}
+}
+
+.section-aside-consult1{
+	.aside-content{
+		padding:120px 60px 120px 0px;  width:100%; margin-bottom:30px;
+	}
+}
+
+.section-aside-consult2{
+	.aside-content{
+		padding:120px 0 120px 60px; width:100%; margin-top:30px;
+	}
+}
+
+.img-consult-connecting{
+	height:210px; margin-bottom:80px;
+}
+
+
+.card-consult-about-doctors{
+	position:relative; z-index:9; overflow:hidden;
+	margin-bottom:-200px;
+	background: #FFFFFF;
+	box-shadow: 0 5px 20px 0 rgba(110,120,130,0.2);
+	border-radius: 7px;
+
+	.bg-aside-doc{ background-size:cover; position:relative;}
+	.caption{
+		position:absolute;
+		top:0; left:0; width:80%;
+		padding:20px; color:#fff;
+		background:rgba($dark, .7); border-bottom-right-radius:50px;
+		font-size:26px;
+	}
+}

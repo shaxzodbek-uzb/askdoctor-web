@@ -1,0 +1,101 @@
+/* ================== PAGE DETAILS ==================  */
+
+
+.map-clinic-detail{
+	 width: 100%;
+  height: 450px; overfloaw:hidden; border-radius:4px;
+}
+.detail-clinic-wrap{
+	margin-top:-100px;
+	.card{ 
+			margin-bottom:15px;
+			border:0; 
+			box-shadow: 0 2px 5px 0 rgba(51,51,51,0.20);
+	}
+	img{ object-fit:cover; }
+	.icontext{
+		margin-bottom:20px;
+		.icon{ color:$primary; font-size:20px; margin-right:10px }
+	}
+
+	ul{ margin-left:0px; padding-left:18px;}
+}
+
+.img-clinic-detail{ border-radius: 4px; }
+
+
+.clinic-detail-tab{
+	border-bottom:1px solid $border-color;
+	.icon{width:36px; height:36px; clear:both; margin-right:5px; opacity:.4 }
+	.nav{ justify-content:space-around;}
+	.nav-link{ padding:16px 15px; text-transform:uppercase; font-size:13px; color:$dark; font-weight:600; align-items: center; display: inline-flex;  }
+	.nav-link.active{ border-bottom:2px solid $primary;
+		.icon{opacity:1}
+	}
+	
+}
+
+.list-services-clinic{
+	li{ margin-bottom:30px; }
+	p{ margin-bottom:5px; display:flex; }
+	.desc{ display:block; width:70%; }
+	.price{ display:block; color:$text-muted;}
+	
+}
+
+
+.item-vrach-clinic{ 
+	display:flex; border-bottom:1px solid $border-color; margin-bottom:20px;
+	.img-wrap{ flex-shrink:0 }
+	.img-avatar{ width:96px; height:96px; border-radius:100%; margin-right:15px; border:1px solid $border-color; } 
+	.job{  text-transform:uppercase; font-size:13px; letter-spacing:1px; font-weight:bold; color:$primary; }
+}
+
+.clinic-gallery-wrap{ 
+	img{max-width:100%; max-height:300px; margin-bottom:15px; cursor:zoom-in;  border:2px solid  transparent; border-radius:4px; transition:.2s;
+		&:hover{ border:2px solid $primary}
+	}
+}
+
+
+
+.detail-doctor-wrap{
+	margin-top: -100px;
+	.card{ 
+			margin-bottom:15px;
+			border:0; 
+			box-shadow: 0 2px 5px 0 rgba(51,51,51,0.20);
+	}
+	.img-avatar{width:220px; height:220px;}
+	.contacts-wrap{
+		    display: inline-block;
+    		padding: 12px; text-align:center; vertical-align: middle;
+    		.icon{
+    			font-size:20px; color:rgba($primary, .6);  margin-left:5px; margin-right:5px;
+    			&:hover{ color:#666}
+    		}
+	}
+
+}
+
+.doctor-short-info{ margin-top:15px; margin-bottom:15px;
+	p{margin-bottom:7px;}
+	i{ color:#ccc; margin-right:7px; font-size:18px; width:20px}
+}
+
+
+.item-vrach-sidebar{ width:100%; align-items:center;
+	margin-top:15px; padding-top:15px; border-top:1px solid #eee;
+	img{ border:1px solid #ddd;}
+
+	&:hover{
+		img{ border-color:$primary}
+		.title{ color:$primary }
+	}
+}
+
+
+
+.qabul-wrap{
+    .title-qabul{ margin-top:30px; color:$danger}
+}

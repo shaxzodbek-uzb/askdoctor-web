@@ -1,0 +1,130 @@
+
+
+.icon-dot{ color:$element; padding-left:5px; padding-right:5px; }
+
+.icontext{
+    display: inline-flex; 
+    .online{
+      position: absolute;
+      border-radius: 7px;
+      top: 5px;
+      left: 5px;
+    }
+    .icon{position:relative; margin-top:3px; flex-shrink:0 }
+    .text{line-height:1.2; padding-left:15px; margin-bottom:0; width: 100%; }
+    small, .title{ display:block;} 
+}
+
+.online.yes{
+      width: 13px;
+      height: 13px;
+      border: 1px solid #fff;
+      display: inline-block;
+      border-radius: 7px;
+      background-color: #20F428;
+      z-index: 19;
+
+}
+.online.no{
+      width: 13px;
+      height: 13px;
+      border: 1px solid #fff;
+      display: inline-block;
+      border-radius: 7px;
+      background-color: #ccc;
+      z-index: 19;
+
+}
+
+
+.price-new, .price{ margin-right:5px;  }
+.price-old{color:#999; }
+
+.notify{
+  position: absolute;
+  top: -4px;  right: -10px;
+  display: inline-block;
+  padding: .25em .6em;
+  font-size: 75%;  line-height: 1;  text-align: center;
+  border-radius: 3rem;  color: #fff;  background-color:$red;
+}
+
+.badge{
+  color:#fff; margin-left:5px;
+}
+
+.list-group{
+  .list-group-item{padding-bottom:.5rem}
+  .title{margin-top:5px; margin-bottom:12px;}
+}
+
+
+.card-header{
+    .title{ margin-bottom:0; line-height:1.5}
+}
+
+.card-group-item{ border-bottom:1px solid $border-color;
+  .card-header{border-bottom:0;  background-color:#f9f9f9}
+  &:last-child{border-bottom:0}
+}
+
+
+
+/* ====================== block ==================== */
+.box{ 
+      margin-bottom:15px;
+      border:0; 
+      background: #FFFFFF;
+      box-shadow: 0 2px 4px 0 rgba(30,30,30,0.1);
+      border-radius: 4px;
+      padding:18px 20px;
+      img{ max-width:100%;}
+}
+
+/* --------- media element --------*/
+.media{
+  .img-wrap{margin-right:1rem}
+}
+
+/* =================  ELEMENTS FOR PRODUCT =================== */
+
+
+/* ================= RATINGS ============== */
+.label-rating{margin-right:10px; display:inline-block; vertical-align:middle}
+
+.stars-simple{margin-bottom:7px;
+    i {color:orange}
+    small{color:#999; margin-left:5px;}
+}
+
+/* rating-list */
+.rating-stars{margin-right:10px; display:inline-block; vertical-align:middle; list-style:none; margin:0; padding:0; position:relative; line-height:1;
+    white-space: nowrap; clear:both;
+    i{ font-size:14px; color:#ccc; display:inline;}
+    li{display:block;  text-overflow:clip;  white-space:nowrap; z-index:1; }
+  
+    li.stars-active{z-index:2; position:absolute; top:0; left:0; overflow: hidden;
+        i{color:orange;}
+    }
+}
+
+.divider-text {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    &:after{
+        content: "";
+        position: absolute;
+        width: 100%; border-bottom:1px solid #ddd;
+        top: 55%;
+        left: 0;
+        z-index: 1;
+    }
+    span{
+        background-color: #fff;
+        padding: 7px; font-size:12px;
+        position: relative;
+        z-index: 2;
+    }
+}

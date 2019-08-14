@@ -1,0 +1,13 @@
+
+/* ================ SECTION-FOOTER ==================  */
+.section-footer{
+	ul a{color:inherit}
+}
+.footer-top{ 
+	border-bottom:1px solid rgba(#fff, .3); padding:10px;
+	.nav-link{ text-transform:uppercase; font-weight:500; font-size:13px; 
+		padding:10px 15px; color:rgba(#fff, .8); border-radius:4px;
+		&:hover{  color:#fff;  }
+	}
+}
+.footer-bottom{padding:30px 0; }

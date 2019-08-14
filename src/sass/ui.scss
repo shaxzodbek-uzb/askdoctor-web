@@ -1,0 +1,50 @@
+
+/* ========================
+UIkit bootstrap-ecommerce.com 
+===================== */
+
+@import "variables-custom";
+
+/* ================== BOOTSTRAP  =================== */
+@import "bootstrap-assets/bootstrap";  
+
+
+@import "ui-assets/base"; 
+
+/* ================== HELPERS  =================== */
+@import "ui-assets/helpers/mixins";
+@import "ui-assets/helpers/helper-classes"; 
+@import "ui-assets/helpers/bg";
+@import "ui-assets/helpers/typography"; 
+@import "ui-assets/helpers/grid-24";
+
+
+
+/* ================== SECTIONS =================== */
+@import "ui-assets/sections/header";
+@import "ui-assets/sections/footer";
+@import "ui-assets/sections/sidebar";
+
+/* ================== PAGES =================== */
+@import "ui-assets/pages/page-chat";
+@import "ui-assets/pages/page-common";
+@import "ui-assets/pages/page-blog";
+@import "ui-assets/pages/page-home";
+@import "ui-assets/pages/page-consult-about";
+@import "ui-assets/pages/page-consult-steps";
+@import "ui-assets/pages/page-listing";
+@import "ui-assets/pages/page-detail";
+@import "ui-assets/pages/page-account";
+
+/* ================== COMPONENTS =================== */
+@import "ui-assets/components/plugin-styles";
+@import "ui-assets/components/buttons";
+@import "ui-assets/components/lists";
+@import "ui-assets/components/card-items";
+@import "ui-assets/components/elements.scss";
+
+@import url('../fonts/fontawesome/css/all.min.css');
+
+
+
+

@@ -1,0 +1,189 @@
+@import "variables-custom";
+
+@media (max-width: 1200px) {
+	/* tablet devices */
+	.section-header{
+		.left{ width:250px; }
+		.right{ width:300px;}
+
+		.btn-call{
+			padding:0; 
+			display: inline-block;
+		    width: 36px;
+		    height: 36px;
+			.num{ display:none }
+		}
+	}
+
+	.menu-header{
+		.nav-link{ padding-left:1rem; padding-right:1rem;  }
+	}
+
+	body{
+		padding-top: 60px;
+	}
+
+
+	.img-consult-left{
+		position:absolute; left:10%; bottom:-50px; width:20%;
+	}
+	.img-consult-right{
+		position:absolute; right:10%; bottom:-50px; width:20%;
+	}
+
+
+
+}
+
+
+
+@media all and (max-width:920px) {   
+	/* mobile devices */
+
+	.consult-step-aside{ width:100% }
+	.bg-consult-step{ width:100% }
+
+	.chat-user-info{ text-align:left!important;
+		
+		.user-wrap{
+			display:flex; align-items:center;
+		}
+		.img-avatar{ width:80px; height:80px; margin-right:20px;  }
+	}
+	.chat-files{ display:none;}
+
+	.topbar-account{margin-top:30px}
+
+	.title-section{    font-size: 28px; }
+	.padding-y{padding-top:45px; padding-bottom:45px;}
+
+	.mobile-order-first{ order:-1;}
+	.mobile-hide{display:none;}
+
+	.section-pagetop{
+		 .title-page{font-size:28px; text-align:center; }
+	}
+
+	.title-page-account {
+	    margin-bottom: 20px;
+	}
+
+	.card-body{ padding:1rem; }
+
+	.item-clinic .timing{ margin-bottom:15px; }
+
+	.section-header{
+		 box-shadow: 0 0 7px rgba(#666, .6);
+		 height:60px;
+		.nav-link{ padding-top:1.2rem; padding-bottom:1.2rem;  transition:.5s }
+		.menu-header{ display:none}
+		
+		.nav-link-user{ display:none;
+			text-indent:0;
+			i { position:static;}
+			 .link-text{ display:none; }
+			}
+		
+		.btn-call{ border:0; }
+
+		.mobile-left{ display:block; width:100px;}
+		.mobile-middle{ display:block; text-align:center }
+		.middle{ display:none}
+		.right{ display:block; width:120px; padding-right:38px; }
+		.left{ text-align:center}
+
+		.lang-widget{ display:none}
+		.btn-search{ line-height:40px;  padding:10px 12px}
+		.btn-hamburger{ display:block}
+		.btn-login{ display:none; }
+		.img-logo{max-height:36px; width:auto}
+   		
+	}
+
+	.bg-faq{
+		background-image:none;
+	}
+
+	.section-intro{
+		.bg-shape{ height:520px; border-bottom-left-radius:70px;   }
+		.item-slide-intro{  height:580px;  }
+		.img-intro-doctor{
+		    right: -150px;
+		    opacity: .5;
+		}
+		.intro-cpu-wrap{ right:0;
+			.img-intro-cpu{ width:420px; }
+			.people{display:none;}
+		}
+		
+		.title-intro{font-size:36px; margin-top:150px; text-align:center;}
+	
+		.intro-decor{
+			height:80px
+		}
+	}
+		
+	.btn-menu-chat{
+		left:90%
+	}
+
+	.title-chat-wrap{
+		margin-bottom:10px;
+	}
+
+	.item-specialist{
+		.text-wrap {
+	    	height: 120px;}
+	    p{ color:#333;}
+	    .bg-special{opacity:.4}
+	    .btn{opacity:1;}
+	}
+	.item-feature{ margin-bottom:20px;}
+
+	.aside-info-right{margin-left:0px;}
+	.aside-info-left{ margin-right:0px;}
+	.section-talk{padding-bottom:0;}
+
+	.aside-round-map { margin-top:60px; margin-bottom:60px;
+		.shape-circle-map{width:300px; height:300px;}
+		.people4, .people1{ width:80px; height:80px;}
+	}
+
+	.form-app-sms{
+		.form-control{margin-bottom:15px;}
+	}
+
+	.item-article-home{margin-bottom:30px;}
+
+	.item-social{ margin-bottom:20px; display:block;
+		.icon{width:36px; height:36px;}
+	}
+
+	.form-account-setting {
+	    padding: 15px;
+	}
+	.section-aside-consult1{
+		.aside-bg{ display:none;}
+		.aside-content{    padding: 30px 0px 30px 0px; }
+	}
+	.section-aside-consult2{
+		.aside-bg{
+			position:static;
+			.consult-detail-bg2{ height:400px;}
+		}
+		.aside-content{    padding: 30px 0px 30px 0px; }
+	}
+	.img-consult-connecting{max-width:100%; height:auto;}
+
+	.item-doctor{
+		.img-wrap{ display:inline-block; margin-bottom:7px;}
+		.img-avatar {
+		    width: 120px;
+		    height: 120px;
+		}
+		i.online{    top: 15px;  left: 6px; }
+	}
+
+	.block-income-doctor{ float:none; margin-bottom:15px;}
+
+}

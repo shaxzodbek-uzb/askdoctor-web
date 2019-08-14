@@ -1,0 +1,128 @@
+body{
+	padding-top: 70px;
+}
+
+/* ================ PAGES HEADER ================== */
+.section-pagetop{ 
+	 padding:60px 0; background-repeat:no-repeat; background-color:#449AFB;
+	.title-page{color:#fff; margin-top:7px; font-size:38px; text-shadow:0 2px 4px rgba(#000, .3)}
+}
+
+.section-pagetop-sm{ 
+   padding:40px 0; background-repeat:no-repeat; background-color:#449AFB;
+  .title-page{color:#fff; margin-top:7px; font-size:38px; text-shadow:0 2px 4px rgba(#000, .3)}
+}
+
+
+.section-content-page{
+	min-height:100vh;
+}
+
+.card-login, .card-register{
+	border:0; 
+	box-shadow:0 0 20px rgba(#333, .5);
+}
+
+.card-login{
+	margin-top:40%
+}
+
+.card-register{
+	margin-top:20%
+}
+
+.page-topbar{margin-bottom:30px;
+background: #FFFFFF;
+box-shadow: 0 1px 7px 0 rgba(125,125,125,0.1);
+}
+
+.btn-close-searchbox{
+	 color: #fff;
+    font-size: 20px;
+    position: absolute;
+    right: 7px;
+    top: 15px;
+}
+
+.nav-topbar {
+  .nav-link {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 13px;
+      padding: 15px 15px;
+      border-bottom:1px solid transparent;
+      margin:0 15px;
+      color:$text-muted;
+      &:hover{ color:$primary}
+      &.active{ 
+        color:$body-color; border-bottom:1px solid $dark;
+       }
+
+    }
+
+}
+
+.nav-alphabet{
+      .nav-link{padding:15px 15px;  margin:0px 0px;}
+}
+
+  .sticky-bar{
+    position:sticky; top:55px;
+  }
+
+.form-search-page{ 
+	position:relative; max-width:600px; margin-left:auto; margin-right:auto;
+
+	.form-control{border:0;}
+	select.form-control{ width:170px; flex:0 0 170px; }
+	input.form-control{border-left:1px solid #ccc;}
+	.btn-search-page{ position:absolute; right:0; top:0px; background:transparent; color:$primary; padding:10px 15px; border:0; outline:none; z-index:6;}
+}
+
+
+.title-letter{
+	background-color:#E9F0F3; padding:7px 15px; border-radius:4px; font-size:18px; color:$dark;
+}
+
+.list-words{ list-style:none; margin:0; padding:0; margin-bottom:20px; width:100%;
+	li{ width:24%; min-width:170px; display:inline-block;  }
+}
+
+
+
+
+.searchbox {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 120;
+  top: 0;
+  left: 0;
+  background-color: rgba(30,60,80, 0.85); 
+}
+
+/* The content */
+.searchbox-content {
+  position: relative;
+  top: 20%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+
+
+.list-searchbox{
+	margin:0; padding:0; list-style:none; 
+	background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-align: left;
+    padding:10px 0;
+
+	li{padding:7px 15px;
+		&:hover{ background-color:#eee; }
+	}
+}

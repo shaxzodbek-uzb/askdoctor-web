@@ -110,7 +110,6 @@ export default {
     }
   },
   mounted() {
-    console.log('Component mounted.')
     // Koproq va Kamroq tugmalari
     // $('.btn-dard-expand').click(function(e) {
     //   e.preventDefault()

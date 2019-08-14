@@ -57,8 +57,6 @@
 
 <script>
 export default {
-  mounted() {
-    console.log('Component mounted.')
-  }
+  name: 'Articles'
 }
 </script>

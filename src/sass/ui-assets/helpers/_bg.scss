@@ -1,0 +1,88 @@
+
+
+.bg-white{background-color:#fff!important}
+
+.bg-white-50{background-color:rgba(#fff,.5)}
+.bg-dark-50{background-color:rgba(#000,.5)}
+
+.bg-grad-primary{
+  @include diagonalGradient($primary-dark, $primary-light);
+}
+
+.bg{background-color:$bg!important;}
+.bg2{background-color:$bg-dark!important;}
+.bg-purple {   background-color: $purple;}
+.bg-orange {   background-color: $orange;}
+.bg-green {   background-color: $green;}
+.bg-blue {   
+  background-image: linear-gradient(47deg, #44AFF8 0%, #4583FF 100%);
+}
+
+
+.bg-blueberry{ overflow: hidden;
+  background-color:#ddd;
+  background-image: linear-gradient(135deg, rgba($secondary-light, .5), rgba($secondary-dark, .2)), url("../images/bg/blueberry.jpg");
+  background-position: 0px 0px, 50% 50%;
+  background-size:cover;
+}
+
+.bg-shadow-in{
+  background-color:#F4F9FB; box-shadow:inset 0 0 40px #DDE5E9;
+}
+
+.bg-doctor{
+    background-image: linear-gradient(135deg, rgba(#44AFF8, .75), rgba(#4583FF, .75)), url("../images/bg/bg-doctor.jpg");
+    background-size: cover;
+    background-repeat: no-repeat, repeat;
+    background-position: 0px 0px, 50% 50%;
+}
+
+.bg-doctors{
+    background-image: linear-gradient(135deg, rgba(#44AFF8, .75), rgba(#4583FF, .75)), url("../images/bg/bg-doctors.jpg");
+    background-size: cover;
+    background-repeat: no-repeat, repeat;
+    background-position: 0px 0px, 50% 50%;
+}
+
+.bg-books{
+    background-image: linear-gradient(135deg, rgba(#44AFF8, .75), rgba(#4583FF, .75)), url("../images/bg/bg-books.jpg");
+    background-size: cover;
+    background-repeat: no-repeat, repeat;
+    background-position: 0px 0px, 50% 50%;
+}
+
+.bg-clinic{
+    background-image: linear-gradient(135deg, rgba(#44AFF8, .75), rgba(#4583FF, .75)), url("../images/bg/bg-clinic.jpg");
+    background-size: cover;
+    background-repeat: no-repeat, repeat;
+    background-position: 0px 0px, 50% 50%;
+}
+
+.bg-blog{
+    background-image: linear-gradient(135deg, rgba(#44AFF8, .75), rgba(#4583FF, .75)), url("../images/bg/bg-blog.jpg");
+    background-size: cover;
+    background-repeat: no-repeat, repeat;
+    background-position: 0px 0px, 50% 50%;
+}
+
+.bg-faq{
+  background-image:url("../images/bg/circle-faq.svg"); background-repeat:no-repeat;
+  background-repeat: no-repeat;
+    background-position: 96% 50%;
+}
+
+// .bg-img{ overflow: hidden;
+//   background-color:#ddd;
+//   background-image: -webkit-linear-gradient(315deg, rgba($primary-light, .8), rgba($primary-dark, .9)), url("../images/banners/bg-cpu.jpg");
+//   background-image: linear-gradient(135deg, rgba($primary-light, .8), rgba($primary-dark, .9)), url("../images/banners/bg-cpu.jpg");
+//   background-position: 0px 0px, 50% 50%;
+//   background-size:  cover;
+// }
+
+.overlay-grad {position:relative;
+    &:before{position:absolute; content:""; display:block; top:0; left:0; right:0; bottom:0;
+        opacity:.6; transition:.5s;
+        @include diagonalGradient($primary, $secondary);  
+    }
+    &:hover:before{opacity:.9;}
+}

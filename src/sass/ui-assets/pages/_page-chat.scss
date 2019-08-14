@@ -1,0 +1,124 @@
+.header-chat{ position:relative;
+	padding:20px 30px; border-bottom:1px solid #ddd;
+	.title{ font-size:24px; margin-bottom:0; }
+	p{ margin-bottom:0;}
+	.btn-account-user{margin-left:10px;}
+}
+
+
+.btn-menu-chat{
+	position: absolute;
+    left: 49%;
+    top: 0;
+    background: #eee;
+    color:#999; 
+    border-radius: 0 0 5px 5px;
+    outline:0; 
+    display:block;
+    &:focus{  outline:0; }
+    &:hover{ background-color:$primary; color:#fff;}
+}
+
+.chat-main-wrap{
+
+	.message-right{ 
+		padding-left:150px; margin-bottom:12px; display:flex; 
+		    flex-direction: row-reverse;
+		.text-wrap{
+    		color: #416f4c; padding:12px;
+    		border-radius:12px 12px 0 12px;
+    		background-color:#ddffe5;  
+		}
+	}
+	.message-left{ 	padding-right:100px; margin-bottom:12px; display:flex;  
+		.img-wrap{ flex: 0 0 44px;}
+		.img-wrap img{ width:44px; height:44px; border-radius:50%; background-color:#ccc;}
+		.text-wrap{
+			margin-left:10px;
+    		color: #333; padding:12px;
+    		border-radius:0 12px 12px 12px;
+    		background-color:#efefef; 
+		}
+	}
+
+
+}
+
+
+.section-window-chat{
+	.chat-aside-left{
+		border-right:1px solid #ddd; background:$bg;
+	}
+	.panel-bottom{
+		border-top:1px solid #ddd;
+		padding:15px; position:relative;	
+
+		textarea {border:0; padding:0; min-height:60px;  width:95%;
+			&:focus, &:active{border:0; outline:0; box-shadow:none;}
+		}
+
+	}
+
+	.chat-left-wrap{
+		padding:15px;
+	}
+
+	.chat-user-info{ text-align:center;
+
+		.img-avatar{ margin-bottom:20px;}
+	}
+
+	.panel-history{
+		padding:15px;
+		overflow-y:auto;
+	}
+
+	.chat-btn-wrap{
+		position:absolute;
+		 right:15px; bottom:10px;
+		 .btn{ padding:7px; color:$primary}
+	}
+ 
+
+	
+}
+
+.chat-files{
+	.title{ 
+margin-top:30px;
+padding:7px; text-align:center;
+border-bottom: 1px solid #ddd;
+font-size: 12px;
+color: $dark;}
+
+}
+
+
+
+.filemanager-chat{ text-align: left; max-width:80%; margin:0 auto; padding:0;
+	list-style:none; 
+	.icon-action{ color:#ccc }
+	.title-folder .icon{ color:$warning}
+	.title-folder{
+	    padding: 5px;
+		display: block;
+		&:hover{ color:$warning}
+	}
+	.file{
+		display:block;
+		margin-bottom:10px; color:#4A90E2;
+		margin-left:30px; position:relative; padding-left:20px;
+		 .icon{ color:#ccc; position:absolute; left:0; top:4px;}
+		 .date{color:$text-muted}
+	}
+}
+
+
+.form-xulosa-wrap{     margin: 5% 7%;
+	.form-group{ position:relative; padding-left:60px;
+		.icon{
+			position: absolute;
+ 			left: 0; 
+ 		}	
+	}
+}
