@@ -21,7 +21,7 @@
         </div>
       </div>
       <!-- dropdown.// -->
-      <hr />
+      <hr>
       <ul class="nav-list">
         <router-link tag="li" class="nav-item" active-class="active" to="/">
           <a>Konsultatsiya</a>
@@ -61,7 +61,7 @@
       </div>
       <div class="left mobile-middle">
         <router-link to="/" class="logo">
-          <img src="/images/logo.png" class="img-logo" />
+          <img src="/images/logo.png" class="img-logo">
         </router-link>
         <div class="lang-widget">
           <a href="#" class="btn btn-sm dropdown-toggle">Uzb</a>
@@ -123,14 +123,11 @@
 </template>
 
 <script>
-import Search from "./Search.vue";
+import Search from './Search.vue'
 
 export default {
   components: {
     search: Search
-  },
-  mounted() {
-    console.log("Component mounted.");
   }
-};
+}
 </script>
