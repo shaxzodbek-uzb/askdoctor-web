@@ -164,18 +164,7 @@ $(document).ready(function() {
 
   // ///////////////  items slider. /plugins/slickslider/
   if ($('.slick-intro').length > 0) { // check if element exists
-    $('.slick-intro').slick({
-      dots: false,
-      infinite: true,
-      speed: 500,
-      fade: true,
-      cssEase: 'linear',
-      autoplay: true,
-      autoplaySpeed: 2000,
-      pauseOnHover: false,
-      slidesToScroll: 1,
-      arrows: false
-    })
+    
   } // end if
 })
 // jquery end

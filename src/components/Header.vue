@@ -21,30 +21,29 @@
         </div>
       </div>
       <!-- dropdown.// -->
-      <hr>
+      <hr />
       <ul class="nav-list">
-        <li class="nav-item active">
-          <router-link to="/">Konsultatsiya</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/clinics">Klinikalar</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/doctors">Vrachlar</router-link>
-        </li>
-        <li />
-        <li class="nav-item">
-          <router-link to="/articles">Maqolalar</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/encyclopedia">Ensiklopedia</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/clinics">Sanatoriyalar</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/">Bog'lanish</router-link>
-        </li>
+        <router-link tag="li" class="nav-item" active-class="active" to="/">
+          <a>Konsultatsiya</a>
+        </router-link>
+        <router-link tag="li" class="nav-item" active-class="active" to="/clinics">
+          <a>Klinikalar</a>
+        </router-link>
+        <router-link tag="li" class="nav-item" active-class="active" to="/doctors">
+          <a>Vrachlar</a>
+        </router-link>
+        <router-link tag="li" class="nav-item" active-class="active" to="/articles">
+          <a>Maqolalar</a>
+        </router-link>
+        <router-link tag="li" class="nav-item" active-class="active" to="/encyclopedia">
+          <a>Ensiklopedia</a>
+        </router-link>
+        <router-link tag="li" class="nav-item" active-class="active" to="/clinics">
+          <a>Sanatoriyalar</a>
+        </router-link>
+        <router-link tag="li" class="nav-item" active-class="active" to="/">
+          <a>Bog'lanish</a>
+        </router-link>
       </ul>
 
       <a href class="btn btn-primary btn-block btn-round">Savol berish</a>
@@ -62,7 +61,7 @@
       </div>
       <div class="left mobile-middle">
         <router-link to="/" class="logo">
-          <img src="/images/logo.png" class="img-logo">
+          <img src="/images/logo.png" class="img-logo" />
         </router-link>
         <div class="lang-widget">
           <a href="#" class="btn btn-sm dropdown-toggle">Uzb</a>
@@ -76,31 +75,29 @@
       <div class="middle">
         <nav class="navbar-expand menu-header">
           <ul class="nav mx-auto">
-            <li class="nav-item active">
-              <router-link class="nav-link" to="/">Konsultatsiya</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link to="/clinics" class="nav-link">Klinikalar</router-link>
-              <!-- <a class="nav-link" href="page-listing-clinics.html">Klinikalar</a> -->
-            </li>
-            <li class="nav-item">
-              <router-link to="/doctors" class="nav-link">Vrachlar</router-link>
-              <!-- <a class="nav-link" href="page-listing-doctors.html">Vrachlar</a> -->
-            </li>
+            <router-link tag="li" class="nav-item" to="/">
+              <a class="nav-link">Konsultatsiya</a>
+            </router-link>
+            <router-link tag="li" class="nav-item" to="/clinics">
+              <a class="nav-link">Klinikalar</a>
+            </router-link>
+            <router-link tag="li" class="nav-item" to="/doctors">
+              <a class="nav-link">Vrachlar</a>
+            </router-link>
             <li class="nav-item dropdown" data-display="static">
               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Ko'proq</a>
               <ul class="dropdown-menu">
                 <li>
-                  <router-link class="dropdown-item" to="/articles">Maqolalar</router-link>
+                  <router-link to="/articles" class="dropdown-item">Maqolalar</router-link>
                 </li>
                 <li>
                   <router-link to="/encyclopedia" class="dropdown-item">Ensiklopedia</router-link>
                 </li>
                 <li>
-                  <router-link class="dropdown-item" to="/clinics">Sanatoriyalar</router-link>
+                  <router-link to="/clinics" class="dropdown-item">Sanatoriyalar</router-link>
                 </li>
                 <li>
-                  <router-link class="dropdown-item" to="/">Bog'lanish</router-link>
+                  <router-link to="/" class="dropdown-item">Bog'lanish</router-link>
                 </li>
               </ul>
             </li>
@@ -126,14 +123,14 @@
 </template>
 
 <script>
-import Search from './Search.vue'
+import Search from "./Search.vue";
 
 export default {
   components: {
     search: Search
   },
   mounted() {
-    console.log('Component mounted.')
+    console.log("Component mounted.");
   }
-}
+};
 </script>

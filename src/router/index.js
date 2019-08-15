@@ -36,10 +36,13 @@ export const constantRoutes = [
 const createRouter = () => new Router({
   // mode: 'history', // require service support
   scrollBehavior: () => ({ y: 0 }),
-  routes: constantRoutes
+  routes: constantRoutes,
+  linkExactActiveClass: 'active',
+  linkActiveClass: 'active-inner'
 })
 
 const router = createRouter()
+
 // Creates a `nextMiddleware()` function which not only
 // runs the default `next()` callback but also triggers
 // the subsequent Middleware function.

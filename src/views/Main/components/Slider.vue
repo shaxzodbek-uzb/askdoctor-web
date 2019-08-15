@@ -8,14 +8,13 @@
         <div class="container">
           <h1 class="title-intro">
             Ishonchli doktorlar
-            <br> bilan onlayn muloqot
+            <br>bilan onlayn muloqot
           </h1>
           <img src="images/bg/intro/contact-elements.png" class="intro-decor">
         </div>
         <!-- container .//  -->
       </div>
       <!--  slide-item.// -->
-
       <div class="item-slide-intro">
         <span class="bg-shape" />
         <div class="container">
@@ -43,6 +42,20 @@
 
 <script>
 export default {
-  name: 'Slider'
+  name: 'Slider',
+  mounted() {
+    window.$('.slick-intro').slick({
+      dots: false,
+      infinite: true,
+      speed: 500,
+      fade: true,
+      cssEase: 'linear',
+      autoplay: true,
+      autoplaySpeed: 2000,
+      pauseOnHover: false,
+      slidesToShow: 1,
+      arrows: false
+    })
+  }
 }
 </script>

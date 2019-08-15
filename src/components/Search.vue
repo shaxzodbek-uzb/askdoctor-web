@@ -24,28 +24,30 @@
 </template>
 
 <script>
+import $ from 'jquery'
+
 export default {
   mounted() {
     console.log('Component mounted.')
-    //  $('#btn_search_header').click(function() {
-    //     $('#searchbox').show()
-    //   })
+    $('#btn_search_header').click(function() {
+      $('#searchbox').show()
+    })
 
-    //   $('#btn_searchbox_close').click(function(e) {
-    //     e.stopPropagation()
-    //     $('#searchbox').hide()
-    //   })
+    $('#btn_searchbox_close').click(function(e) {
+      e.stopPropagation()
+      $('#searchbox').hide()
+    })
 
-    //   $('.list-searchbox li').click(function() {
-    //      searchterm = $(this).text()
-    //      $('#searchinput_header').val(searchterm)
-    //       $('.list-searchbox').hide()
-    //   })
-    //   jQuery(document).on('keyup', function(evt) {
-    //     if (evt.keyCode == 27) {
-    //        $('#searchbox').hide()
-    //     }
-    // })
+    $('.list-searchbox li').click(function() {
+      const searchterm = $(this).text()
+      $('#searchinput_header').val(searchterm)
+      $('.list-searchbox').hide()
+    })
+    $(document).on('keyup', function(evt) {
+      if (evt.keyCode === 27) {
+        $('#searchbox').hide()
+      }
+    })
   }
 }
 </script>

@@ -8,10 +8,12 @@ import JQuery from 'jquery'
 window.$ = window.JQuery = JQuery
 import 'slick-carousel'
 import 'bootstrap'
-// You need a specific loader for CSS files like https://github.com/webpack/css-loader
+
 import 'v-toaster/dist/v-toaster.css'
 import './sass/ui.scss'
 import './sass/responsive.scss'
+import 'slick-carousel/slick/slick.scss'
+import 'slick-carousel/slick/slick-theme.scss'
 
 // optional set default imeout, the default is 10000 (10 seconds).
 Vue.use(Toaster, { timeout: 3000 })
