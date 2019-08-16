@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/views/Main/Index.vue'
+import Home from '@/views/main/index.vue'
 import ClinicRouter from './modules/clinic'
 import DoctorRouter from './modules/doctor'
 import ArticleRouter from './modules/article'
