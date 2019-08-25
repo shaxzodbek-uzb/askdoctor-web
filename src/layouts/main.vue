@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="screen-overlay"></div>
+    <div class="screen-overlay" />
     <Search />
     <MobileHeader />
     <!-- offcanvas-bar.// -->
@@ -19,10 +19,7 @@ export default {
     Search: () => import('@/components/Search'),
     Header: () => import('@/components/Header'),
     MobileHeader: () => import('@/components/MobileHeader'),
-    HeaFooterder: () => import('@/components/Footer'),
+    Footer: () => import('@/components/Footer')
   }
 }
 </script>
-
-<style>
-</style>

@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/views/main/index.vue'
 import ClinicRouter from './modules/clinic'
 import DoctorRouter from './modules/doctor'
 import ArticleRouter from './modules/article'
@@ -12,16 +11,44 @@ Vue.use(Router)
 
 export const constantRoutes = [
   {
-    path: '/',
-    name: 'home',
-    component: Home
+    path: '/chat',
+    name: 'Chat',
+    component: () => import('@/layouts/chat'),
+    children: [
+      {
+        path: 'user',
+        name: 'UserChat',
+        component: () => import('@/views/chat/user')
+      },
+      {
+        path: 'doctor',
+        name: 'DoctorChat',
+        component: () => import('@/views/chat/doctor')
+      },
+      {
+        path: 'conclusion',
+        name: 'DoctorConclusion',
+        component: () => import('@/views/chat/conclusion')
+      }
+    ]
   },
-  ...ClinicRouter,
-  ...DoctorRouter,
-  ...ArticleRouter,
-  ...EncyclopediaRouter,
-  ...AuthRouter,
-  ...profileRouter
+  {
+    path: '/',
+    component: () => import('@/layouts/main'),
+    children: [
+      {
+        path: '/',
+        name: 'home',
+        component: () => import('@/views/main/index')
+      },
+      ...ClinicRouter,
+      ...DoctorRouter,
+      ...ArticleRouter,
+      ...EncyclopediaRouter,
+      ...AuthRouter,
+      ...profileRouter
+    ]
+  }
   // {
   //   path: "/about",
   //   name: "about",

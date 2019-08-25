@@ -1,6 +1,5 @@
 ///// ELEMENTS ONLY FOR HOME PAGE
-.section-intro{
-	position:relative;
+.section-intro{position:relative;
 	.bg-shape{
 			display:block; position:absolute; left:0; width:100%; top:0; z-index:-1;
 			border-bottom-left-radius:110px;  
@@ -11,7 +10,8 @@
 
 	.title-intro{ color:#fff; font-family: 'Ubuntu', sans-serif; font-size:48px; margin-top:220px; max-width:500px; line-height:1.5}
 
-	.intro-decor{ position: absolute; bottom:23px;}
+	.intro-decor{
+		    position: absolute; bottom:23px;}
 	
 }
 
@@ -191,6 +191,11 @@ background: #E5F2F9; width:500px; height:500px; border-radius:100%; display:bloc
 	100% { transform: translateY(157px); }
 }
 
+
+
+
+.aside-call-wrap{   }
+.aside-videochat-wrap{   }
 
 .aside-talk-content{ 
 	height:500px;

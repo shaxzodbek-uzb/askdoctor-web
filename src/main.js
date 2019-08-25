@@ -14,6 +14,7 @@ import './sass/ui.scss'
 import './sass/responsive.scss'
 import 'slick-carousel/slick/slick.scss'
 import 'slick-carousel/slick/slick-theme.scss'
+import './fonts/fontawesome/css/all.min.css'
 
 // optional set default imeout, the default is 10000 (10 seconds).
 Vue.use(Toaster, { timeout: 3000 })

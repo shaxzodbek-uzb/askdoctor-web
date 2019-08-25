@@ -66,9 +66,9 @@ box-shadow: 0 1px 7px 0 rgba(125,125,125,0.1);
       .nav-link{padding:15px 15px;  margin:0px 0px;}
 }
 
-  .sticky-bar{
-    position:sticky; top:55px;
-  }
+.sticky-bar{
+  position:sticky; top:55px; z-index: 21;
+}
 
 .form-search-page{ 
 	position:relative; max-width:600px; margin-left:auto; margin-right:auto;
@@ -81,7 +81,7 @@ box-shadow: 0 1px 7px 0 rgba(125,125,125,0.1);
 
 
 .title-letter{
-	background-color:#E9F0F3; padding:7px 15px; border-radius:4px; font-size:18px; color:$dark;
+	background-color:$secondary; padding:7px 15px; border-radius:4px; font-size:18px; color:#fff;
 }
 
 .list-words{ list-style:none; margin:0; padding:0; margin-bottom:20px; width:100%;
@@ -125,4 +125,16 @@ box-shadow: 0 1px 7px 0 rgba(125,125,125,0.1);
 	li{padding:7px 15px;
 		&:hover{ background-color:#eee; }
 	}
+}
+
+
+
+.item-contect{ margin-bottom:30px; padding:20px; border-radius:7px; display:block;  transition:.2s;
+  .icon-wrap{ color:#fff; margin-bottom:20px;}
+  text-align:center;
+  a{ display:block; }
+
+  &:hover{ 
+    background-color:#fff; box-shadow:0 0 10px rgba(#333, .1); transition:.2s;
+  }
 }

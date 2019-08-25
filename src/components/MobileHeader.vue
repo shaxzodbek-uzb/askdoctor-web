@@ -1,7 +1,7 @@
 <template>
   <nav id="offcanvas_bar" class="offcanvas-bar">
     <button class="btn-close btn btn-sm">
-      <i class="fa fa-lg fa-times"></i>
+      <i class="fa fa-lg fa-times" />
     </button>
     <router-link to="/login" class="btn btn-round btn-primary btn-login">Kirish</router-link>
     <div class="dropdown d-inline-block">
@@ -16,7 +16,7 @@
       </div>
     </div>
     <!-- dropdown.// -->
-    <hr />
+    <hr>
     <ul class="nav-list">
       <router-link tag="li" class="nav-item" active-class="active" to="/">
         <a>Konsultatsiya</a>
@@ -47,8 +47,5 @@
 <script>
 export default {
   name: 'MobileHeader'
-};
+}
 </script>
-
-<style>
-</style>
